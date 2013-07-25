@@ -1,0 +1,43 @@
+description: Register new accounts
+requestParameters:
+  properties:
+    username:
+      type: string
+      required: yes
+      default: 50
+      description: Username for account
+      example: SupermanInACan
+    password:
+      type: string
+      required: yes
+      example: NotKrypton!te
+    phone:
+      type: string
+      required: no
+    email:
+      type: string
+      required: no
+responseParameters:
+  properties:
+    id:
+      type: string
+      required: yes
+      description: ID of new account
+      example: sfdfkjh4234hsd
+    createdAt:
+      type: string
+      required: yes
+      description: timestamp that the account was created
+      example: 2011-11-07T20:58:34.448Z
+    sessionToken:
+      type: string
+      required: yes
+      description: token which can be used to authenticate subsequent requests as this account
+      example: kjhfiuhwerkjsdfbxkjhser
+responseCodes:
+- status: 201 OK
+  successful: yes
+  description: Account was created
+- status: 400 Bad Request
+  successful: no
+  description: Indicates malformed parameters
