@@ -21,7 +21,7 @@ task :default => :help
 desc "Generate API docs"
 task :docs do
   puts "removing old docs"
-  system("rm -rf docs/*")
+  system("rm -rf doc/*")
   system("fdoc convert . --output=doc/api") or exit!(1)
   system("fdoc convert . --output=doc/api --format=markdown") or exit!(1)
 end
