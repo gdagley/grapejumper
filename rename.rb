@@ -24,6 +24,8 @@ replacements = [
   ['grapejumper', lower_project_name],
 ]
 
+system "mv grapejumper.fdoc.meta #{lower_project_name}.fdoc.meta"
+
 files = Dir.glob("**/*.*")
 #these files need to be manually added because they will not be picked up by the glob
 files << ".ruby-gemset"
