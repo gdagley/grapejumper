@@ -18,6 +18,7 @@ What does it include?
     > git clone git://github.com/gdagley/grapejumper.git my_app_name
     > cd my_app_name
     > ruby rename.rb my_app_name
+    > rvm gemset use myappname
     > gem install bundler
     > bundle install
     > bundle exec guard
